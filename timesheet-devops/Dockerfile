@@ -1,9 +1,7 @@
 FROM eclipse-temurin:8-jdk-alpine
-
 WORKDIR /app
 
-# Copier le JAR généré par Maven
-ADD target/timesheet-devops-1.0.jar app.jar
+ARG JAR_FILE
+COPY target/${JAR_FILE} app.jar
 
-# Démarrer l’application
-ENTRYPOINT ["java","-jar","app.jar"]
+ENTRYPOINT ["java","-jar","/app/app.jar"]

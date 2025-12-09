@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: station-ski-app
+  labels:
+    app: station-ski-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: station-ski-app
+  template:
+    metadata:
+      labels:
+        app: station-ski-app
+    spec:
+      containers:
+      - name: station-ski-app
+        image: station-ski:latest  # Remplace par le nom correct de ton image
+        ports:
+        - containerPort: 8087  # Mets ici le port sur lequel ton application Station Ski écoute
