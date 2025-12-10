@@ -4,7 +4,7 @@ server:
 
 spring:
   application:
-    name: station-ski-app  # Nom de l'application
+    name: Timeshit # Nom de l'application
 
 # Configuration de la base de données (exemple MySQL)
 # Autres configurations nécessaires
