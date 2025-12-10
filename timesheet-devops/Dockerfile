@@ -6,7 +6,8 @@ FROM eclipse-temurin:8-jdk-alpine
 EXPOSE 8089
 
 # Copier le fichier JAR généré dans le conteneur
-ADD target/gestion-station-skii-0.0.1-SNAPSHOT.jar app.jar
+ADD target/timesheet-0.0.1-SNAPSHOT.jar app.jar
 
 # Démarrer l’application
+
 ENTRYPOINT ["java", "-jar", "app.jar"]
