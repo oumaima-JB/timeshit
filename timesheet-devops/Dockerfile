@@ -1,12 +1,9 @@
-# Utiliser une image légère avec Java 8
-FROM eclipse-temurin:8-jdk-alpine
+FROM  eclipse-temurin:8-jdk-alpin
 
+WORKDIR /app
 
-# Exposer le port de l’application Spring Boot
-EXPOSE 8089
-
-# Copier le fichier JAR généré dans le conteneur
-ADD target/gestion-station-skii-0.0.1-SNAPSHOT.jar app.jar
+# Copier le JAR généré par Maven
+ADD target/timesheet-devops-1.0.jar app.jar
 
 # Démarrer l’application
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java","-jar","app.jar"]
